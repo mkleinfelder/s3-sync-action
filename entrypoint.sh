@@ -43,7 +43,7 @@ sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS_S3_BUCKET}/${DEST_DIR} \
               --profile s3-sync-action \
               --no-progress \
               --exclude '*' \
-              --include ${INCLUDE} \
+              --include '${INCLUDE}' \
               ${ENDPOINT_APPEND} $*"
 
 # Clear out credentials after we're done.
